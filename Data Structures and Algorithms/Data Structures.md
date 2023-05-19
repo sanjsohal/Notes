@@ -94,3 +94,52 @@ Queues are also simple data structures. It is a FIFO data structure. FIFO stands
 2. dequeue: It is used to delete an element. Space time complexity is O(1)
 3. search: Space time complexity is O(N)
 
+
+
+<h3>Strings</h3>
+Strings are array of characters. In java and some other languages, strings are immutable. It means a string cannot be altered once it is created. Various operation and time space complexity for performing that operations is:
+
+1. traverse: For traversing a string, time complexity is O(N) and space complexity is O(1) if we are not performing any auxiliary operation.
+2. copy: Copy operation takes O(N) time space complexity.
+3. get: This operation can be performed in O(1) time space complexity.
+4. If we want to concatenate two strings of length N and M. Time space complexity is O(N+M) for such operation.
+
+Note: For above last point, it is adivisable to convert string to array of characters, if we want to perform concatenation operation as we can insert element in O(1) time space in growable dynamic array. If array has become full, then only it takes O(N) time because in that situtation, a new array is created and elements are copied to that one. So this becomes case of amortized analysis as this happens very rarely.
+
+
+<h3>Graphs</h3>
+Graphs are one of non linear data structure. They are collection of nodes and these nodes may or may not connect with each other. Nodes of graph are also called vertices or vertex. Connection between these vertices are called edges. There are following types of graphs.
+1. A graph is said to be connected if we can reach to every other vertex from one vertex through edges. 
+2. If in a graph there are vertexes which cannot be reached from other vertexes. That graph is called disconnected graph.
+3. A graph is said to be directed graph if there is a direction between nodes. For e.g. a graph of flights between different places of world is directed graph.
+4. On the other hand, a graph is said to be undirected graph when there is no direction of edges between nodes or vertexes. For e.g. Friendship network of people don't have any direction. So the friendship network is an example of undirected graph.
+5. A graph is said to be cyclic graph if it has three or more edges and have kind of closed cycle of edges between them. 
+6. A graph is said to be acyclic graph if it doesn't have closed cycle between three or more vertexes.
+
+Note: When writing algorithm for cyclic graph, please make sure that you don't write which put your program in infinite loop. There should be some way to mark the visited nodes.
+
+Some applications of graph data strucutre are:
+1. Storing products in ecommerce applications.
+2. Storing route data for a food delivery app.
+3. Flights network of world
+
+Operations that can be performed on graph are:
+1. For storing a graph, it takes O(V+E) space complexity where V is number of vertexes and E is number of edges that are connections between vertexes.
+2. traverse: There are two ways to traverse a graph that are depth first search technique and breadth first search.
+
+
+<h3>Trees</h3>
+
+A tree is also a non linear data structure which is kind of graph and has root node. Following are some properties of trees:
+1. A tree is an acyclic graph.
+2. Each node can have only one parent node.
+
+There are following types of trees:
+1. Binary tree: A binary tree is a tree where a node can have atmost two child nodes.
+2. Ternary tree: A ternary tree is a tree where a node can have atmost three child nodes.
+3. k-ary tree: A tree where a node can have atmost k number of child nodes is called k-ary tree.
+
+Operations that can be performed on tree are:
+1. store: For storing a tree, it takes O(N) space complexity where N is number of nodes in tree.
+2. traverse: Traversing through a tree takes O(N) time if we are not performing an auxiliary operation.
+3. 
