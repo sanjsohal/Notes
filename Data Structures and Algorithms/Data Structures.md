@@ -79,3 +79,18 @@ Hashtables are used to store data in form of key and values. Underlying structur
 1. insert, search and deletion of an entry from hashtable is performed in O(1) ususally.
 2. Let us suppose if the underlying structure is about to become full or it is 2/3 occuppied, then a new array is copied and elements are stored at different location as per new hash position calculated according to the size of underlying array. Here as per amortized analysis, time and space complexity becomes O(N).
 
+
+<h3>Stacks and Queues</h3>
+Stacks are one of the very simple data structure. It is a LIFO data structure. LIFO stands for Last In First Out. Element can be inserted from the end of array and removed from end of array. Stack of books is an example of stack. Underlying data structure used by stack is dynamic array. Following are the operations that can be performed in stack:
+
+1. push: This operation is used in insert an element in stack and can be performed in O(1) time and space complexity.
+2. pop: This operation is used to remove an element from stack and also can be performed in O(1) time and space complexity.
+3. peek: This operation is used to read the last element from tack. It can be done in O(1) time and space complexity. This operation doesn't remove the element but only read from the stack.
+4. search: This operation can be done in O(N).
+
+Queues are also simple data structures. It is a FIFO data structure. FIFO stands for First In First Out. A queue of people on booking center is an example of queue. Underlying data structure used in queue is a linked list. Following are the operations can be performed in queue:
+
+1. enqueue: It is used to insert an element. Space time complexity is O(1)
+2. dequeue: It is used to delete an element. Space time complexity is O(1)
+3. search: Space time complexity is O(N)
+
