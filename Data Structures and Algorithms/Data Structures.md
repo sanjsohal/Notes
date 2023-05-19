@@ -56,7 +56,26 @@ For e.g. Let us say there is an array of size 2. Suppose our operating system st
 					Traversing array without performing any auxiliary opation on element= O(N) Time complexity and O(1) Space Complexity
 
 4. Space and time complexity for copy operation is O(N)
-5. Insert operation is used in case of Dynamic Arrays. Dynamic arrays are arrays whose size can increase dynamically. In Java, ArrayList and Vector are two implementations of Dynamic Array. If we declare an arraylist without giving size. It creates arraylist of size 16. Let us suppose if we are inserting element at last position, it will take O(1) time and space. But if array is full then and we try to insert other element, it will create a new array in O(N) time and O(1) space. Space is O(1) because it will wipe out the earlier space.
+5. To copy an array, it takes O(N) space and time complexity.
+6. Insert operation is used in case of Dynamic Arrays. Dynamic arrays are arrays whose size can increase dynamically. In Java, ArrayList and Vector are two implementations of Dynamic Array. If we declare an arraylist without giving size. It creates arraylist of size 16. Let us suppose if we are inserting element at last position, it will take O(1) time and space. But if array is full then and we try to insert other element, it will create a new array in O(N) time and O(1) space. This is a special case scenario when array is full and we try to insert new element it takes O(N) time. Amortized analysis is used to determine the complexity for scenarios which are not frequent. Space is O(1) because it will wipe out the earlier space. If we need to insert an array at start position, time complexity is O(N). 
 
 Note: Insert operation is different from set operation as set operation is used to override existing value and with insert operation, we can insert element at any position whether it is start, end or anywhere in middle of array.
+
+
+<h3>LinkedLists</h3> 
+LinkedList is conceptually same as Arrays. The only difference is whereas arrays store the data in contiguous locations, linkedlist don't store data in contiguous locations. It can have different elements stored at totally different locations and not in continous locations like arraya. Elements are connected with linking between them.
+
+1. O(i) is time complexity to get ith element in linkedlist and O(1) is space complexity as we don't use any space for this operation.
+2. O(i) is time complexity to set element at ith position in linkedlist and space complexity is O(1).
+3. To initialize a linkedlist, time and space complexity is O(N).
+4. To copy a linkedlist, time and space complexity is O(N).
+5. To insert an element at any position in linked list, time and space complexity is O(1).
+
+Note: LinkedLists has many types. Single linked list is the one in which one element is connected to other in forward direction. Double linked list is the one in which each element has reference to next element and previous element. Circular linked list is a list in which head and tail element is connected with each other.
+
+<h3>Hashtable</he> 
+Hashtables are used to store data in form of key and values. Underlying structure used by hashtables is an array where each index of array furthur contain a linkedlist. To store data in hashtable, first some hashcode is calculated on basis of some hashing function to calculate the index to store the value. If at some point, same value is returned by hashing function(hash collision) then data is stored furthur in the linkedlist with the key. If a good hashing function is used, then there is very less chance of hash collision.
+
+1. insert, search and deletion of an entry from hashtable is performed in O(1) ususally.
+2. Let us suppose if the underlying structure is about to become full or it is 2/3 occuppied, then a new array is copied and elements are stored at different location as per new hash position calculated according to the size of underlying array. Here as per amortized analysis, time and space complexity becomes O(N).
 
