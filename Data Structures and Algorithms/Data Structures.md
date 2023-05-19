@@ -142,4 +142,3 @@ There are following types of trees:
 Operations that can be performed on tree are:
 1. store: For storing a tree, it takes O(N) space complexity where N is number of nodes in tree.
 2. traverse: Traversing through a tree takes O(N) time if we are not performing an auxiliary operation.
-3. 
